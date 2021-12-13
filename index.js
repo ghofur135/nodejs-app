@@ -5,7 +5,7 @@
 
     // Respond with "hello world" for requests that hit our root "/"
     app.get("/", function (req, res) {
-     return res.send("Hello World via GitHub Actions");
+     return res.send("Hello World via GitHub with Jenkins");
     });
 
     // listen to port 7000 by default

@@ -2,7 +2,7 @@
     const app = require("../index");
 
     describe("GET /", () => {
-      it("respond with Hello World via GitHub Actions", (done) => {
-        request(app).get("/").expect("Hello World via GitHub Actions", done);
+      it("respond with Hello World via GitHub with Jenkins", (done) => {
+        request(app).get("/").expect("Hello World via GitHub with Jenkins", done);
       })
     });
