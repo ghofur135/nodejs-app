@@ -33,14 +33,14 @@ jobs:
 
     steps:
     - name: SSH and deploy node app
-      uses: fifsky/ssh-action
+      uses: fifsky/ssh-action@master
       with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USER }}
-        password: ${{ secrets.SSH_PASSWORD }}
-        port: ${{ secrets.SSH_PORT }}
         command: |
           cd ~/ubuntu/code/nodejs-app
           git pull origin main
           npm install --production
           pm2 restart node-app
+        host: ${{ secrets.SSH_HOST }}
+        username: ${{ secrets.SSH_USER }}
+        password: ${{ secrets.SSH_PASSWORD }}
+        port: ${{ secrets.SSH_PORT }}
