@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 12.x, 14.x]
+        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v2
@@ -35,10 +35,34 @@ jobs:
     - name: SSH and deploy node app
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.SSH_HOST_01 }}
-        username: ${{ secrets.SSH_GITHUB2 }}
-        key: ${{ secrets.SSH_KEY }}
-        port: ${{ secrets.SSH_PORT }}
+        host: 18.138.182.107
+        username: github2
+        key: MIIEoQIBAAKCAQEA0YQy42v0jYTchxbUsrHIKG3JvV2VfxcyN1o7KJqloPeL6AMu
+jLqKVLXumNO0eRR2fDNLy/iGRUBUvIZkHqSaC3qwOMlkHvEqifDDyfr2Ew2iLzLA
+ycPz2Yn85wkOc9XsPVVgGxHk4tmivDTm2EmVwZntRRfnWkd8/Mw1E2YtL5RPFmSK
+O9bQY2bY4MlprlUInOHlk7wdtfu6elEmnKAHXDKODjgB4+r470/NWMZGAukAZwSE
+eHnPE09XKo+v53XJ5DmqnTEnhlnmWY1Mknvm+EKWJGx/ILmy7HzuzxPhJKeMO0OK
+4+HuVikJvGuOxJi7Zg6cC3UPzOYY8PnmrN0S6wIDAQABAoIBAQDLwj2bX0oet6+g
+0VtZzfxTFTK1r2XMi8qSenY+LugVe6ncofuLcX9GkwjQKFPDzVrNvzVf0PsELmQ6
+VJjaFEqcD12CXJm6XeB49mXy8NaQARpRvJIxpxhn4ALMzcn4bXuqynUE3ooy9GWH
+lAtNHYM/HWvbXjvpWMz9LbwQebZIJbjuHoaozOMcINqVn/eAlB/3Cslaxej4144s
+5KSZhWwkH+LbQ7LNbmI/K1bUFCYwBjWktu4cAxp/C0hWHNXyoCqIHsmsqS4wDA+V
+TRRMJgJbDcKh0prorjsakPJDA0uDtb7fXlCvNXMtpFHYk4244C4qRBOfJT3jr9D4
+fdESfuHBAoGBAPVNMe0g9H1cI5W5zOH+LgQceM3Rf8PFFEHZltACqCHzj5KJeFUn
+nSA9DDY9dvEBy+v4KVCE9VlFxiIN812y6hbSqfXhPOhyvmuGeAwhj8khH+0XnL8k
+BQiF+0DP6pJLCI5SrbYWEglPXQFdZ/sCH8VuSrBQg//gcuXz1WzJEk+3AoGBANqn
+dfG+rnqUV0EBacrPkD/erSXf7d5dQMWAzxcEvJa99uqzWMMQKk8lkLdm+FcTggR7
+yY0CxofaTS+1OC4GszvjSQHWpQ9zg5McfLZMYNwwdqHKLgIBng+t0xWLROI2xKxF
+daqXe8MVCKMBY+KglMJioRDEIMp7QZmWOhAbs+5tAoGAWZCjDxr+ShtvXsbleQqu
+0I94yGWbCecWm2iQOUkPDL56iJ2rEySQqWnA4LkWia8HPxRwOVciokLoshx35Jlk
+AYtPxVhFPfZPcsE5aeyDLIPsvUvmzp+fOtp4v9RqqJm++QBVLuvmEAIrSklJowvG
+f/biTHhJig7wxOd/4OWVywcCgYANVQCgCNxipQDc+dUVhKpq+ozcLlc2o8D7SetW
+n/dPya1wihbzbdzmjofQZvrldE8NLu8PJggs6GakbgxK4iWzlRwyfH/7/TMcmTQR
+eX6+bkYNf2JmxOp6UkL4oVFF6cj8KBAQosPtFS89oSwR+XCYmaLwfsTxE6rgToSj
+zsyd0QJ/GvAcaFP5TpFNawahpzM41g6nqy5no1LFq4hD3EGB6FQzuVyImhtbsV7a
+7UINaLLhMkstKqjniC150IvurcpBLCq4O24h0lbYVCWgVNmJofKL6l2rMz2tPa9r
+KhaUSd6KXLHbGwdqLfvyyfnZyrp8vUNgIBWNzfScrGDDGPW9dg==
+        port: 2
         script: |
           cd ~/ubuntu/code/nodejs-app
           git pull origin main
