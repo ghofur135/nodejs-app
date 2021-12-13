@@ -35,9 +35,9 @@ jobs:
     - name: SSH and deploy node app
       uses: appleboy/ssh-action@master
       with:
-        host: ${{ secrets.SSH_HOST }}
-        username: ${{ secrets.SSH_USERNAME }}
-        key: ${{ secrets.SSH_KEY }}
+        host: ${{ secrets.SSH_HOST_01 }}
+        username: ${{ secrets.SSH_GITHUB2 }}
+        key: ${{ secrets.SSH_KEY_107 }}
         port: ${{ secrets.SSH_PORT }}
         script: |
           cd ~/ubuntu/code/nodejs-app
